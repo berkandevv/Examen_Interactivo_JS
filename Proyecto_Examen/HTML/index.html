@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Coche</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="../SCRIPT/script.js"></script>
+</head>
+
+<body>
+    <!-- Contenedor para el cronómetro -->
+    <div id="cronometro"></div>
+
+    <!-- Sección de inicio del examen -->
+    <div id="inicio">
+        <p>Este es un <strong>examen teórico de coche</strong> compuesto por <strong>10 preguntas</strong>. Dispones de 
+            <strong>10 minutos</strong> para completarlo. Asegúrate de leer cada pregunta con atención antes de 
+            seleccionar tu respuesta. ¡Buena suerte!</p>
+
+        <!-- Campo para ingresar el nombre -->
+        <label for="name">Introduce tu nombre completo:</label>
+        <input id="name" type="text" name="name">
+
+        <!-- Campo para ingresar el DNI/NIE -->
+        <label for="dni">Introduce tu DNI/NIE:</label>
+        <input id="dni" type="text" name="dni">
+
+        <!-- Botón para empezar el examen -->
+        <button id="botonInicio">Empezar</button>
+    </div>
+
+    <!-- Formulario del examen (oculto hasta que no pase la validación de datos) -->
+    <form id="formularioExamen" action="#" method="post" style="display:none;">
+
+        <!-- Pregunta 1 -->
+        <fieldset class="pregunta1">
+            <legend>
+                1. Si padece una alergia respiratoria estacional, ¿Qué es recomendable?
+            </legend>
+            <label><input type="radio" name="pregunta1" value="a"> A) Conducir con las ventanillas cerradas.</label>
+            <label><input type="radio" name="pregunta1" value="b"> B) Conducir al amanecer o al atardecer.</label>
+            <label><input type="radio" name="pregunta1" value="c"> C) Aumentar la dosis de medicamento.</label>
+        </fieldset>
+
+        <!-- Pregunta 2 -->
+        <fieldset class="pregunta2">
+            <legend>
+                2. ¿Debe volver al carril derecho antes de adelantar más vehículos?
+            </legend>
+            <label><input type="radio" name="pregunta2" value="a"> A) Sí, si los vehículos detrás van más rápido.</label>
+            <label><input type="radio" name="pregunta2" value="b"> B) Sí, siempre.</label>
+            <label><input type="radio" name="pregunta2" value="c"> C) No, en autopistas no es obligatorio.</label>
+        </fieldset>
+
+        <!-- Pregunta 3 -->
+        <fieldset class="pregunta3">
+            <legend>3. ¿Cómo afecta el éxtasis a la conducción?</legend>
+            <label><input type="radio" name="pregunta3" value="a"> A) Reduce la sensibilidad al deslumbramiento.</label>
+            <label><input type="radio" name="pregunta3" value="b"> B) Puede provocar ilusiones ópticas.</label>
+            <label><input type="radio" name="pregunta3" value="c"> C) Facilita la concentración.</label>
+        </fieldset>
+
+        <!-- Pregunta 4 -->
+        <fieldset class="pregunta4">
+            <legend>
+                4. ¿Puede sobresalir la carga por la parte trasera de un turismo?
+            </legend>
+            <label><input type="radio" name="pregunta4" value="a"> A) Sí, hasta un 15% de la longitud del vehículo.</label>
+            <label><input type="radio" name="pregunta4" value="b"> B) Sí, hasta un 10% de la longitud total.</label>
+            <label><input type="radio" name="pregunta4" value="c"> C) No, la carga no puede sobresalir.</label>
+        </fieldset>
+
+        <!-- Pregunta 5 -->
+        <fieldset class="pregunta5">
+            <legend>
+                5. ¿Qué luces debes encender si conduces de noche con poca iluminación?
+            </legend>
+            <label><input type="radio" name="pregunta5" value="a"> A) Solo las luces de posición.</label>
+            <label><input type="radio" name="pregunta5" value="b"> B) Posición y cruce.</label>
+            <label><input type="radio" name="pregunta5" value="c"> C) Posición y largo alcance.</label>
+        </fieldset>
+
+        <!-- Pregunta 6 -->
+        <fieldset class="pregunta6">
+            <legend>
+                6. ¿Cómo actuar si prevés quedar inmovilizado en autopista?
+            </legend>
+            <label><input type="radio" name="pregunta6" value="a"> A) Usar luces antiniebla traseras.</label>
+            <label><input type="radio" name="pregunta6" value="b"> B) Advertirlo con luces de freno repetidamente.</label>
+            <label><input type="radio" name="pregunta6" value="c"> C) Poner luces de posición, aunque sea de día.</label>
+        </fieldset>
+
+        <!-- Pregunta 7 -->
+        <fieldset class="pregunta7">
+            <legend>
+                7. ¿Cómo se llama el lugar de la moto donde el conductor apoya los pies?
+            </legend>
+            <label><input type="radio" name="pregunta7" value="a"> A) Pedales.</label>
+            <label><input type="radio" name="pregunta7" value="b"> B) Estribos.</label>
+            <label><input type="radio" name="pregunta7" value="c"> C) Reposapiés.</label>
+        </fieldset>
+
+        <!-- Pregunta 8 -->
+        <fieldset class="pregunta8">
+            <legend>
+                8. ¿Pueden hacerte otra prueba de alcoholemia tras un resultado negativo?
+            </legend>
+            <label><input type="radio" name="pregunta8" value="a"> A) Sí, si hay signos evidentes de alcohol.</label>
+            <label><input type="radio" name="pregunta8" value="b"> B) Solo si estás en un accidente.</label>
+            <label><input type="radio" name="pregunta8" value="c"> C) No, en ningún caso.</label>
+        </fieldset>
+
+        <!-- Pregunta 9 -->
+        <fieldset class="pregunta9">
+            <legend>
+                9. ¿Qué información debes dar al avisar de un accidente?
+            </legend>
+            <label><input type="radio" name="pregunta9" value="a"> A) Lugar y matrículas.</label>
+            <label><input type="radio" name="pregunta9" value="b"> B) Cómo ocurrió y vehículos implicados.</label>
+            <label><input type="radio" name="pregunta9" value="c"> C) Lugar, número de víctimas e identificación.</label>
+        </fieldset>
+
+        <!-- Pregunta 10 ("select" desplegable) -->
+        <fieldset class="pregunta10">
+            <legend>10. ¿Dónde ocurren más atropellos?</legend>
+            <label for="pregunta10">Selecciona una opción:</label>
+            <select id="pregunta10" name="pregunta10">
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option value="a">A) En autopistas.</option>
+                <option value="b">B) De noche.</option>
+                <option value="c">C) Cuando los vehículos van marcha atrás.</option>
+            </select>
+        </fieldset>
+
+        <!-- Mensaje para la pregunta 10 -->
+        <div id="mensajePregunta10"></div>
+
+        <!-- Botón para enviar las respuestas -->
+        <input type="submit" value="¡Enviar respuestas!">
+    </form>
+
+</body>
+
+</html>
